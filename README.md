@@ -1,6 +1,6 @@
 # SSnake
 
-[![license](https://img.shields.io/github/license/Psilym/SSnake.svg)](./LICENSE)
+[![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)]() [![linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)]()
 
 > [Augmented contour scoring snake for instance segmentation of placental separable villi](https://10.1016/j.bspc.2024.106713)
 >
