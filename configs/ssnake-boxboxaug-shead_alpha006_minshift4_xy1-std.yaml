@@ -1,0 +1,42 @@
+model: 'ssnake-boxboxaug-shead_alpha006_minshift4_xy1-std'
+network: 'ro_34'
+task: 'ssnake'
+resume: True
+gpus: (0,)
+
+save_ep: 10
+eval_ep: 10
+component:
+    box_aug: {'use': True, 'scale_range': [0.7, 1.1], 'trust_out': 0.9, 'shift_range':[-0.0,0.0],'sample_method': 'box','smooth':True}
+    score_head: {'use': True, 'alpha':0.06, 'minshift':4, 'use_xy_size':True, 'use_score_calibration':True}
+loss: {'ct':True, 'init':True, 'hau':True}
+train_dataset:
+    scale_range: [0.7, 1.1]
+
+train:
+    optim: 'adam'
+    lr: 1e-4
+    milestones: (80, 120, 150, 170)
+    gamma: 0.5
+    batch_size: 8
+    dataset: 'vcocoTrain'
+    num_workers: 4
+    epoch: 300
+    folds: [0,1,2,3]
+val:
+    dataset: 'vcocoVal'
+    batch_size: 1
+    ct_threshold: 0.3
+test:
+    dataset: 'vcocoVal'
+    batch_size: 1
+    ct_threshold: 0.3
+post:
+    required: False
+    post_types: {'ct_th':False,'nms':False, 'edge_remove':False}
+
+heads: {'ct_hm': 1, 'wh': 2, 'reg': 2}
+segm_or_bbox: 'segm'
+ct_threshold_vis: 0.3
+use_ct_lres: True
+
