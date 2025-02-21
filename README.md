@@ -1,6 +1,6 @@
 # README
 
-[![license](https://img.shields.io/github/license/Psilym/SSnake.svg)](LICENSE)
+[![license](https://img.shields.io/github/license/Psilym/SSnake.svg)](https://github.com/Psilym/SSnake/LICENSE)
 
 > [Augmented contour scoring snake for instance segmentation of placental separable villi](https://10.1016/j.bspc.2024.106713)
 >
@@ -14,11 +14,11 @@ This paper proposes **SSnake** which strengthens [DeepSnake](https://github.com/
 
 - A picture for predicted contour scores is as follows.
 
-![](/home/psilym/Phdoing/red-house/dsnake/snake-pan2-github/readme/vis_score.png)
+![](readme/vis_score.png)
 
 - Architecture of SSnake
 
-![architecture](/home/psilym/Phdoing/red-house/dsnake/snake-pan2-github/readme/architecture.png)
+![architecture](readme/architecture.png)
 
 ## Installation
 
@@ -43,7 +43,7 @@ python visualize.py --cfg_file $config_file --img_path $img_path --ckpt_path $ck
 ```
 
 Results should be similar as follows:
-<img src="/home/psilym/Phdoing/red-house/dsnake/snake-pan2-github/readme/vis_inference.png" alt="vis_inference" style="zoom:80%;" />
+<img src="readme/vis_inference.png" alt="vis_inference" style="zoom:80%;" />
 
 ## Data Structure
 
